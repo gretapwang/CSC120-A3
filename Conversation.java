@@ -6,6 +6,7 @@ class Conversation implements ConversationRequirements {
 
   // Attributes 
   String[] transcript;
+  static String[] cannedResponses = {"Mmm-hm.", "Cool!", "Uh huh.", "I see.", "Gotcha."};
 
   /**
    * Constructor 
@@ -133,7 +134,6 @@ class Conversation implements ConversationRequirements {
     String returnString = "";
     // If no words were mirrored, choose canned response
     if (nonMirrorWords == words.length){
-      String[] cannedResponses = {"Mmm-hm.", "Cool!", "Uh huh.", "I see.", "Gotcha."};
       Random random = new Random();
       returnString = cannedResponses[random.nextInt(cannedResponses.length)];
     }
